@@ -1,0 +1,223 @@
+:root{
+    --golden:rgb(244, 191, 0);
+    --red:rgb(254, 0, 44);
+    --blue:rgb(0, 96, 255);
+    --service-color:rgba(244, 191, 0, 0.4);
+    --white:rgb(255,255,255);
+    --font: 'Poppins', Arial,Helvetica;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Poppins;
+}
+header{
+    background-color: var(--golden);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav{
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+nav .logo{
+    height:80px;
+
+}
+nav .logo img{
+    height: 100%;
+    border-radius: 50%;
+}
+nav>ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+nav>ul>li{
+    margin: 0 10px;
+}
+nav>ul>li>a{
+    text-decoration: none;
+    font-size: 1.5rem ;
+    font-weight: 500;
+    color: var(--white);
+    padding: 9px 16px;
+}
+nav>ul>li>a:hover{
+background-color: var(--red);
+border-radius: 8px;
+}
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin:4rem auto ;
+}
+.hero-text{
+    flex-basis: 50%;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.hero-text h1{
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+.hero-text h1 span{
+    color: var(--blue);
+}
+.hero-text h1 strong{
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--red);
+}
+.hero-text p{
+    margin: 3rem 0;
+    font-size: 32px;
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+}
+
+.hero-text  a{
+
+    font-size: 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-style: normal;
+    padding: 9px 16px;
+    background-color: var(--red);
+    color: white;
+}
+
+/* --------------------------Hero Grid Image----------------- */
+.hero-image{
+    width: 50%;
+
+    
+}
+.grid-container{
+    
+    width: 100% ;
+    height: 800px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns:1fr 1fr ;
+    gap: 30px;
+}
+.grid1{
+    
+    grid-area:2 / 1 / 4 / 2 ;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.grid2{
+   
+    grid-area:1 / 2 / 3 / 3 ;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.grid3{
+  
+    grid-area:3 / 2 / 5 / 3 ;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.grid-container img{`
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+/* -----------Popular Service----------------- */
+ .popular-service{ 
+    width: 100vw;
+    padding: 4rem 0;
+    background-color: var(--service-color) ;
+   
+} 
+.popular-service h2 span{
+    font-size: 1.5rem;
+    color: var(--red);
+}
+.popular-service h2{
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.3;
+    padding-bottom: 2rem;
+    
+}
+.serivce-container{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5%;
+    flex-direction: row;
+   
+}
+.serivce-container>div{
+    width: 30%;
+   background-color: var(--blue); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    background-color: white;
+    border-radius: 8px;
+    flex-direction: column;
+    box-shadow:5px 3px 15px  rgba(0, 0, 0, 0.3) ;
+}
+.serivce-container>div>div:hover{
+    transform: scale(1.07);
+    transition: 0.5s all;
+    cursor: pointer;
+}
+.service-icon{
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    margin: 1.2rem 0;
+    cursor: pointer;
+}
+.service-icon img{
+width: 100%;
+height: 100%;
+}
+.service-title h4{
+    font-size: 32px;
+    font-weight: 550;
+
+}
+.service-text{
+    text-align: center;
+    margin: 1.2rem 0;
+    padding: 15px;
+}
+.service-btn{
+    margin-bottom: 2rem;
+}
+.service-btn a{
+    text-decoration: none;
+    font-size: 24px;
+    background-color: red;
+    padding: 9px 16px;
+    border-radius: 8px;
+    color: white;
+}
