@@ -144,7 +144,6 @@ border-radius: 8px;
 }
 /* -----------Popular Service----------------- */
  .popular-service{ 
-    width: 100vw;
     padding: 4rem 0;
     background-color: var(--service-color) ;
    
