@@ -137,7 +137,7 @@ border-radius: 8px;
     overflow: hidden;
     border-radius: 8px;
 }
-.grid-container img{`
+.grid-container img{
     object-fit: cover;
     width: 100%;
     height: 100%;
