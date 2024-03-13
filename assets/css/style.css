@@ -1,9 +1,11 @@
 :root{
-    --golden:rgb(244, 191, 0);
+    --golden:#D2B45D;
+    --black:rgb(0,0,0);
     --red:rgb(254, 0, 44);
     --blue:rgb(0, 96, 255);
     --service-color:rgba(244, 191, 0, 0.4);
     --white:rgb(255,255,255);
+    --sep:#0e0d0d;
     --font: 'Poppins', Arial,Helvetica;
 }
 *{
@@ -12,13 +14,17 @@
 }
 body{
     font-family: Poppins;
+    background-color: var(--black);
 }
 header{
-    background-color: var(--golden);
-    
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--black);
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+    position: sticky;
+    top: 0px;
+
 }
 nav{
     max-width: 1200px;
@@ -27,14 +33,15 @@ nav{
     align-items: center;
     justify-content: space-between;
     padding: 10px 0;
+   
 }
 nav .logo{
-    height:80px;
+    height:60px;
 
 }
 nav .logo img{
     height: 100%;
-    border-radius: 50%;
+
 }
 nav>ul{
     display: flex;
@@ -61,8 +68,11 @@ border-radius: 8px;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    height: 650px;
     max-width: 1200px;
-    margin:4rem auto ;
+    margin: auto ;
+    border-bottom: 1px solid #343434;
+    
 }
 .hero-text{
     flex-basis: 50%;  
@@ -75,18 +85,14 @@ border-radius: 8px;
     font-size: 60px;
     font-weight: 600;
     line-height: 1.2;
+    color: white;
 }
 .hero-text h1 span{
-    color: var(--blue);
+    color: var(--golden);
 }
-.hero-text h1 strong{
-    font-size: 60px;
-    font-weight: 600;
-    line-height: 1.2;
-    color: var(--red);
-}
+
 .hero-text p{
-    margin: 3rem 0;
+    margin: 3rem 0 1rem;
     font-size: 32px;
     font-weight: 500;
     font-style: italic;
@@ -100,20 +106,75 @@ border-radius: 8px;
     text-decoration: none;
     font-style: normal;
     padding: 9px 16px;
-    background-color: var(--red);
+    background-color: var(--golden);
     color: white;
 }
-
+/* ----------------Mobilemenu--------------------- */
+.mobilemenu a{
+    text-decoration: none;
+    font-size: 3rem;
+    color: white;
+    /* display: none; */
+}
+.mobile{
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 2rem 3rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 300px;
+    width: 100%;
+}
+.mobile ul{
+    list-style: none;
+    text-align: center; 
+    
+} 
+.mobile ul li{
+    line-height: 3;
+}
+.mobile ul a{
+    text-decoration: none;
+    color: white;
+}
+@media screen and(max-width:900px) {
+   header nav>ul{
+        visibility: hidden;
+    }
+    .mobile{
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 2rem 3rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        max-width: 300px;
+        width: 100%;
+    }
+    .mobile ul{
+        list-style: none;
+        text-align: center; 
+        
+    } 
+    .mobile ul li{
+        line-height: 3;
+    }
+    .mobile ul a{
+        text-decoration: none;
+        color: white;
+    }
+    
+}
 /* --------------------------Hero Grid Image----------------- */
 .hero-image{
     width: 50%;
-
-    
+ 
 }
 .grid-container{
     
     width: 100% ;
-    height: 800px;
+    height: 600px;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-columns:1fr 1fr ;
@@ -144,21 +205,17 @@ border-radius: 8px;
 }
 /* -----------Popular Service----------------- */
  .popular-service{ 
-    width: 100vw;
+    width: 100%;
     padding: 4rem 0;
-    background-color: var(--service-color) ;
-   
+    background-color: var(--sep);   
 } 
-.popular-service h2 span{
-    font-size: 1.5rem;
-    color: var(--red);
-}
 .popular-service h2{
     font-size: 3rem;
     font-weight: 600;
     text-align: center;
     line-height: 1.3;
     padding-bottom: 2rem;
+    color: var(--white);
     
 }
 .serivce-container{
@@ -174,14 +231,14 @@ border-radius: 8px;
 }
 .serivce-container>div{
     width: 30%;
-   background-color: var(--blue); 
+   background-color: var(--black); 
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5%;
-    background-color: white;
-    border-radius: 8px;
+    color: white;
     flex-direction: column;
+    border: 1px solid #343434;
     box-shadow:5px 3px 15px  rgba(0, 0, 0, 0.3) ;
 }
 .serivce-container>div>div:hover{
@@ -195,6 +252,7 @@ border-radius: 8px;
     overflow: hidden;
     margin: 1.2rem 0;
     cursor: pointer;
+    
 }
 .service-icon img{
 width: 100%;
@@ -216,8 +274,89 @@ height: 100%;
 .service-btn a{
     text-decoration: none;
     font-size: 24px;
-    background-color: red;
+    background-color: var(--golden);
     padding: 9px 16px;
     border-radius: 8px;
     color: white;
+}
+/* -------------------Gallery--------------------- */
+.gallery{
+    width: 100%;
+    color: var(--white);
+}
+.gallery h2{
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.3;
+    padding-bottom: 2rem;
+    color: var(--white);
+}
+.review{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5%;
+    width: 100%;
+    flex-direction: column;
+   max-width: 1200px;
+   margin: auto;
+
+}
+.review-item-box{
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: var(--white);
+    flex-basis: 1;
+    margin: auto;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: black;
+}
+.top-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 0;    
+}
+.client-detail{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+.client-detail .profile-pic{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+}
+.client-name{
+    padding-left: 20px;
+}
+.client-name h6{
+    font-weight: 600;
+    font-size: 16px;
+}
+.client-name p{
+    font-size: 12px;
+    color:var(--client-review-date) ;
+}
+.google-logo{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding-right: 20px;
+}
+.google-logo img{
+    width: 100%;
+    height: 100%;
+}
+.rating{
+    padding-left: 20px;
+}
+.rating i{
+    font-size: 1.3rem;
+}
+.client-msg{
+    padding: 15px 20px;
 }
